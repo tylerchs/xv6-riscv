@@ -4,7 +4,8 @@
 
 int main(void) {
    // invoke uptie and print returned value
-   printf("uptime: %d\n", uptime());
+   printf("Process Uptime: %d\n", uptime());
+   printf("Testing syscalltrace() implementation...\n");
 
    // call syscalltrace to start tracing system calls
    syscalltrace();
@@ -20,6 +21,7 @@ int main(void) {
       getpid();
       exit(0);
    }
+
 
    exit(0);
 }

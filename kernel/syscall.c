@@ -174,7 +174,8 @@ syscall(void)
     // check if tracing flag is on
     if (p->tracing) {
        // print syscall before running if tracing is on
-       printk("[trace] pid %d: %s\n", p->pid, syscallnames[num]);
+       printk("Syscall Name: %s\n", syscallnames[num]);
+       printk("Process PID: %d\n", p->pid);
     }
     // Use num to lookup the system call function for num, call it,
     // and store its return value in p->trapframe->a0
