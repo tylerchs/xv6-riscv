@@ -110,3 +110,19 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+uint64
+sys_debug(void)
+{
+  int enable;
+  argint(0, &enable);
+  return setdebug(enable);   
+}
+
+uint64
+sys_priority_fork(void)
+{
+  int priority;
+  argint(0, &priority);
+  return priority_fork(priority);   
+}
